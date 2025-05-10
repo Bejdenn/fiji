@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 if [[ -v OMAKUB_FIRST_RUN_OPTIONAL_APPS ]]; then
 	apps=$OMAKUB_FIRST_RUN_OPTIONAL_APPS
 

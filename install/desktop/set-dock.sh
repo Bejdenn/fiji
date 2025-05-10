@@ -1,23 +1,16 @@
+#!/usr/bin/env bash
 # Favorite apps for dock
 apps=(
-	"google-chrome.desktop"
-	"Alacritty.desktop"
-	"Neovim.desktop"
-	"code.desktop"
-	"WhatsApp.desktop"
-	"signal-desktop.desktop"
-	"Zoom.desktop"
-	"spotify.desktop"
-	"steam.desktop"
-	"pinta_pinta.desktop"
-	"md.obsidian.Obsidian.desktop"
-	"Activity.desktop"
-	"Docker.desktop"
-	"Omakub.desktop"
 	"1password.desktop"
-	"org.gnome.Settings.desktop"
+	"Activity.desktop"
+	"Ghostty.desktop"
+	"Neovim.desktop"
+	"com.spotify.Client.desktop"
+	"md.obsidian.Obsidian.desktop"
 	"org.gnome.Nautilus.desktop"
-	"localsend_app.desktop"
+	"org.gnome.Settings.desktop"
+	"org.localsend.localsend_app.desktop"
+	"org.mozilla.firefox.desktop"
 )
 
 # Array to hold installed favorite apps

@@ -1,7 +1,8 @@
+#!/usr/bin/env bash
+
 # Needed for all installers
-sudo apt update -y
-sudo apt upgrade -y
-sudo apt install -y curl git unzip
+sudo dnf update
+sudo dnf install -y curl git unzip
 
 # Run terminal installers
-for installer in ~/.local/share/omakub/install/terminal/*.sh; do source $installer; done
+for installer in ~/.local/share/fiji/install/terminal/*.sh; do source $installer; done

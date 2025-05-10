@@ -1,6 +1,5 @@
-# Play games from https://store.steampowered.com/
-cd /tmp
-wget https://cdn.akamai.steamstatic.com/client/installer/steam.deb
-sudo apt install -y ./steam.deb
-rm steam.deb
-cd -
+#!/usr/bin/env bash
+
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-"$(rpm -E %fedora)".noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-"$(rpm -E %fedora)".noarch.rpm -y -
+sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
+sudo dnf install steam -y

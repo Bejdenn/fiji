@@ -1,2 +1,3 @@
-# Gives you previews in the file manager when pressing space
-sudo apt install -y gnome-sushi
+#!/usr/bin/env bash
+
+sudo dnf install -y sushi
