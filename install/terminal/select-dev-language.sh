@@ -15,14 +15,14 @@ if [[ -n "$languages" ]]; then
       sudo dnf install -y go
       ;;
     Python)
-      if [ -d ~/miniconda3 ]; then
-        echo "miniconda exists, skip installation"
-      else
-        mkdir -p ~/miniconda3
-        wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
-        bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-        rm ~/miniconda3/miniconda.sh
-      fi
+      sudo rpm --import https://repo.anaconda.com/pkgs/misc/gpgkeys/anaconda.asc
+      echo '[conda]
+name=Conda
+baseurl=https://repo.anaconda.com/pkgs/misc/rpmrepo/conda
+enabled=1
+gpgcheck=1
+gpgkey=https://repo.anaconda.com/pkgs/misc/gpgkeys/anaconda.asc' | sudo tee /etc/yum.repos.d/conda.repo
+      sudo dnf install -y conda
       ;;
     Rust)
       sudo dnf install -y rustup
