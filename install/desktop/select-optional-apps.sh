@@ -4,7 +4,7 @@ if [[ -v FIJI_FIRST_RUN_OPTIONAL_APPS ]]; then
 
 	if [[ -n "$apps" ]]; then
 		for app in $apps; do
-			source "$FIJI_PATH/install/desktop/optional/app-${app,,}.sh"
+			source "$fiji_path/install/desktop/optional/app-${app,,}.sh"
 		done
 	fi
 fi
