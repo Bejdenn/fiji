@@ -21,4 +21,6 @@ message "Installing optional desktop applications..."
 source "$fiji_path/install/desktop/select-optional-apps.sh"
 
 # Logout to pickup changes
-gum confirm "Ready to reboot for all settings to take effect?" && sudo reboot
+if gum confirm "Ready to reboot for all settings to take effect?"; then
+	sudo reboot
+fi
