@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+message "Installing Gum..."
+
 echo '[charm]
 name=Charm
 baseurl=https://repo.charm.sh/yum/

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+message "Installing 1Password..."
 sudo rpm --import https://downloads.1password.com/linux/keys/1password.asc
 
 # Add 1Password YUM repository

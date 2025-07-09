@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Set Cascadia Mono as the default monospace font
-echo "==> Configuring Gnome settings..."
+message "Configuring Gnome settings..."
 gsettings set org.gnome.desktop.interface monospace-font-name 'IosevkaTerm Nerd Font Mono 10'
 
 # Reveal week numbers in the Gnome calendar

@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # Needed for all installers
-echo "==> Installing terminal dependencies..."
+message "Installing terminal dependencies..."
 sudo dnf install -y -q curl git unzip jq
 
 # Run terminal installers
-echo "==> Installing terminal applications..."
+message "Installing terminal applications..."
 source "$fiji_path/install/terminal/app-chezmoi.sh"
 source "$fiji_path/install/terminal/app-fastfetch.sh"
 source "$fiji_path/install/terminal/app-lazygit.sh"

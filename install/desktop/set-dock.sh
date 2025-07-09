@@ -39,5 +39,5 @@ favorites_list=$(printf "'%s'," "${installed_apps[@]}")
 favorites_list="[${favorites_list%,}]"
 
 # Set the favorite apps
-echo "==> Configuring dock..."
+message "Configuring dock..."
 gsettings set org.gnome.shell favorite-apps "$favorites_list"

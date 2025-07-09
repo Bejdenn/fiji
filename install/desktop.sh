@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Run core desktop installers
-echo "==> Installing core desktop applications and settings..."
+message "Installing core desktop applications and settings..."
 source "$fiji_path/install/desktop/a-flatpak.sh"
 source "$fiji_path/install/desktop/app-ghostty.sh"
 source "$fiji_path/install/desktop/app-gnome-sushi.sh"
@@ -17,7 +17,7 @@ source "$fiji_path/install/desktop/set-gnome-settings.sh"
 source "$fiji_path/install/desktop/set-nautilus-preferences.sh"
 
 # Run optional app installers
-echo "==> Installing optional desktop applications..."
+message "Installing optional desktop applications..."
 source "$fiji_path/install/desktop/select-optional-apps.sh"
 
 # Logout to pickup changes

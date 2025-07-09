@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-echo "==> Installing Gnome Sushi..."
+message "Installing Gnome Sushi..."
 sudo dnf install -y -q sushi

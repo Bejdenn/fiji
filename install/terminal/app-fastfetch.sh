@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-echo "==> Installing Fastfetch..."
+message "Installing Fastfetch..."
 sudo dnf install -y -q fastfetch

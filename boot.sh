@@ -2,6 +2,12 @@
 
 set -e
 
+# Function to print a message with a green arrow and bold text
+# Usage: message "Your message here"
+message() {
+	echo -e "\e[1m\e[32m==>\e[0m \e[1m$1\e[0m"
+}
+
 ascii_art='███████╗██╗     ██╗██╗
 ██╔════╝██║     ██║██║
 █████╗  ██║     ██║██║
@@ -11,32 +17,32 @@ ascii_art='███████╗██╗     ██╗██╗
 '
 
 echo -e "$ascii_art"
-echo "==> Fiji is for fresh Fedora Workstation 42+ installations only!"
+message "Fiji is for fresh Fedora Workstation 42+ installations only!"
 echo -e "\nBegin installation (or abort with ctrl+c)..."
 
 if [ "$1" == "--local" ]; then
 	# When running locally, use the directory of the script itself
 	export fiji_path=$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")
-	echo "==> Running local Fiji installation from $fiji_path"
+	message "Running local Fiji installation from $fiji_path"
 else
 	export fiji_path="$HOME/.local/share/fiji"
 	repo="https://github.com/Bejdenn/fiji.git"
 
-	echo "==> Updating system packages..."
+	message "Updating system packages..."
 	sudo dnf update -y -q
-	echo "==> Ensuring Git is installed..."
+	message "Ensuring Git is installed..."
 	sudo dnf install -y -q git
 
 	if [ -d "$fiji_path" ]; then
-		echo "==> Fiji is already installed, pulling latest changes..."
+		message "Fiji is already installed, pulling latest changes..."
 		cd "$fiji_path"
 		git pull --quiet
 		cd - >/dev/null
 	else
-		echo "==> Cloning Fiji repository..."
+		message "Cloning Fiji repository..."
 		git clone --quiet "$repo" "$fiji_path"
 	fi
 fi
 
-echo "==> Starting Fiji installation..."
+message "Starting Fiji installation..."
 source "$fiji_path/install.sh"
